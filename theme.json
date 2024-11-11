@@ -10,13 +10,127 @@
   },
   "settings": {
     "color": {
-      "defaultPalette": false
+      "defaultPalette": false,
+      "palette": [
+        { "slug": "sky-blue", "color": "#3498db", "name": "Stoker Sky Blue" },
+        { "slug": "green", "color": "#2ecc71", "name": "Stoker Green" },
+        { "slug": "red", "color": "#e74c3c", "name": "Stoker Red" },
+        { "slug": "orange", "color": "#f39c12", "name": "Stoker Orange" },
+        { "slug": "purple", "color": "#9b59b6", "name": "Stoker Purple" },
+        { "slug": "navy", "color": "#34495e", "name": "Stoker Navy" },
+        { "slug": "white", "color": "#ffffff", "name": "Stoker White" },
+        { "slug": "black", "color": "#000000", "name": "Stoker Black" },
+        {
+          "slug": "light-gray",
+          "color": "#ecf0f1",
+          "name": "Stoker Light Gray"
+        },
+        { "slug": "gray", "color": "#95a5a6", "name": "Stoker Gray" },
+        { "slug": "dark-gray", "color": "#7f8c8d", "name": "Stoker Dark Gray" },
+        {
+          "slug": "light-pink",
+          "color": "#f5b7b1",
+          "name": "Stoker Light Pink"
+        },
+        { "slug": "lavender", "color": "#d7bde2", "name": "Stoker Lavender" },
+        {
+          "slug": "pastel-blue",
+          "color": "#aed6f1",
+          "name": "Stoker Pastel Blue"
+        },
+        {
+          "slug": "mint-green",
+          "color": "#a9dfbf",
+          "name": "Stoker Mint Green"
+        },
+        { "slug": "peach", "color": "#fad7a0", "name": "Stoker Peach" },
+        { "slug": "turquoise", "color": "#1abc9c", "name": "Stoker Turquoise" },
+        { "slug": "pumpkin", "color": "#e67e22", "name": "Stoker Pumpkin" },
+        {
+          "slug": "bright-pink",
+          "color": "#e84393",
+          "name": "Stoker Bright Pink"
+        },
+        { "slug": "yellow", "color": "#ffeb3b", "name": "Stoker Yellow" },
+        {
+          "slug": "dark-purple",
+          "color": "#8e44ad",
+          "name": "Stoker Dark Purple"
+        }
+      ],
+      "background": true,
+      "text": true,
+      "link": true,
+      "custom": true
     }
   },
   "blocks": {
     "core/site-title": {
       "color": {
-        "defaultPalette": true
+        "defaultPalette": true,
+        "palette": [
+          { "slug": "sky-blue", "color": "#3498db", "name": "Stoker Sky Blue" },
+          { "slug": "green", "color": "#2ecc71", "name": "Stoker Green" },
+          { "slug": "red", "color": "#e74c3c", "name": "Stoker Red" },
+          { "slug": "orange", "color": "#f39c12", "name": "Stoker Orange" },
+          { "slug": "purple", "color": "#9b59b6", "name": "Stoker Purple" },
+          { "slug": "navy", "color": "#34495e", "name": "Stoker Navy" },
+          { "slug": "white", "color": "#ffffff", "name": "Stoker White" },
+          { "slug": "black", "color": "#000000", "name": "Stoker Black" },
+          {
+            "slug": "light-gray",
+            "color": "#ecf0f1",
+            "name": "Stoker Light Gray"
+          },
+          { "slug": "gray", "color": "#95a5a6", "name": "Stoker Gray" },
+          {
+            "slug": "dark-gray",
+            "color": "#7f8c8d",
+            "name": "Stoker Dark Gray"
+          },
+          {
+            "slug": "light-pink",
+            "color": "#f5b7b1",
+            "name": "Stoker Light Pink"
+          },
+          { "slug": "lavender", "color": "#d7bde2", "name": "Stoker Lavender" },
+          {
+            "slug": "pastel-blue",
+            "color": "#aed6f1",
+            "name": "Stoker Pastel Blue"
+          },
+          {
+            "slug": "mint-green",
+            "color": "#a9dfbf",
+            "name": "Stoker Mint Green"
+          },
+          { "slug": "peach", "color": "#fad7a0", "name": "Stoker Peach" },
+          {
+            "slug": "turquoise",
+            "color": "#1abc9c",
+            "name": "Stoker Turquoise"
+          },
+          { "slug": "pumpkin", "color": "#e67e22", "name": "Stoker Pumpkin" },
+          {
+            "slug": "bright-pink",
+            "color": "#e84393",
+            "name": "Stoker Bright Pink"
+          },
+          { "slug": "yellow", "color": "#ffeb3b", "name": "Stoker Yellow" },
+          {
+            "slug": "dark-purple",
+            "color": "#8e44ad",
+            "name": "Stoker Dark Purple"
+          }
+        ],
+        "link": true,
+        "custom": false
+      }
+    },
+    "core/cover": {
+      "color": {
+        "duotone": [],
+        "customDuotone": false
       }
     }
   }
