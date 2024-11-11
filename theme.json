@@ -1,0 +1,23 @@
+{
+  "name": "stocker-theme",
+  "description": "A custom wordpress theme built for stock market.",
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "settings": {
+    "color": {
+      "defaultPalette": false
+    }
+  },
+  "blocks": {
+    "core/site-title": {
+      "color": {
+        "defaultPalette": true
+      }
+    }
+  }
+}
