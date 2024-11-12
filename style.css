@@ -9,6 +9,10 @@
  * @format
  */
 
-.header-carousel .owl-nav {
+.owl-nav {
   display: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
 }

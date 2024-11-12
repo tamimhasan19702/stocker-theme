@@ -6,10 +6,9 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class();?>>
-    <?php wp_body_open(  );?>
+<body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
 
-    <h1>hi</h1>
 
 
     <?php wp_footer(); ?>
