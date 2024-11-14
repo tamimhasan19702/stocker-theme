@@ -62,6 +62,20 @@
       "text": true,
       "link": true,
       "custom": true
+    },
+    "typography": {
+      "lineHeight": true,
+      "fontSize": true,
+      "customFontSize": true
+    },
+    "spacing": {
+      "padding": true
+    },
+    "border": {
+      "color": true,
+      "style": true,
+      "width": true,
+      "radius": true
     }
   },
   "blocks": {
@@ -125,12 +139,29 @@
         ],
         "link": true,
         "custom": false
+      },
+      "typography": {
+        "lineHeight": true,
+        "fontSize": true,
+        "customFontSize": true
+      },
+      "spacing": {
+        "padding": true
+      },
+      "border": {
+        "color": true,
+        "style": true,
+        "width": true,
+        "radius": true
       }
     },
     "core/cover": {
       "color": {
         "duotone": [],
         "customDuotone": false
+      },
+      "spacing": {
+        "gap": true
       }
     }
   }
