@@ -588,8 +588,8 @@ get_header();
                     aut aliquam suscipit error corporis accusamus labore....
                 </p>
                 <div class="d-flex align-items-center">
-                    <img src="img/testimonial-3.jpg" class="img-fluid rounded-circle" style="width: 60px; height: 60px"
-                        alt="" />
+                    <img src=" <?php echo get_template_directory_uri(); ?> /img/testimonial-3.jpg"
+                        class="img-fluid rounded-circle" style="width: 60px; height: 60px" alt="" />
                     <div class="ms-3">
                         <h5>Admin</h5>
                         <p class="mb-0">October 9, 2025</p>
@@ -598,7 +598,8 @@ get_header();
             </div>
             <div class="blog-item p-4">
                 <div class="blog-img mb-4">
-                    <img src="img/service-4.jpg" class="img-fluid w-100 rounded" alt="" />
+                    <img src="  <?php echo get_template_directory_uri(); ?> /img/service-4.jpg"
+                        class="img-fluid w-100 rounded" alt="" />
                     <div class="blog-title">
                         <a href="#" class="btn">Non-Dividend Stocks</a>
                     </div>
@@ -609,8 +610,8 @@ get_header();
                     aut aliquam suscipit error corporis accusamus labore....
                 </p>
                 <div class="d-flex align-items-center">
-                    <img src="img/testimonial-1.jpg" class="img-fluid rounded-circle" style="width: 60px; height: 60px"
-                        alt="" />
+                    <img src=" <?php echo get_template_directory_uri(); ?> /img/testimonial-1.jpg"
+                        class="img-fluid rounded-circle" style="width: 60px; height: 60px" alt="" />
                     <div class="ms-3">
                         <h5>Admin</h5>
                         <p class="mb-0">October 9, 2025</p>
@@ -752,7 +753,8 @@ get_header();
             </div>
             <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
                 <div class="bg-primary rounded">
-                    <img src="img/about-2.png" class="img-fluid w-100" alt="" />
+                    <img src=" <?php echo get_template_directory_uri(); ?> /img/about-2.png" class="img-fluid w-100"
+                        alt="" />
                 </div>
             </div>
         </div>
@@ -777,7 +779,8 @@ get_header();
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="team-item">
                     <div class="team-img">
-                        <img src="img/team-1.jpg" class="img-fluid" alt="" />
+                        <img src=" <?php echo get_template_directory_uri(); ?> /img/team-1.jpg" class="img-fluid"
+                            alt="" />
                     </div>
                     <div class="team-title">
                         <h4 class="mb-0">David James</h4>
@@ -798,7 +801,8 @@ get_header();
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="team-item">
                     <div class="team-img">
-                        <img src="img/team-2.jpg" class="img-fluid" alt="" />
+                        <img src=" <?php echo get_template_directory_uri(); ?> /img/team-2.jpg" class="img-fluid"
+                            alt="" />
                     </div>
                     <div class="team-title">
                         <h4 class="mb-0">David James</h4>
@@ -819,7 +823,8 @@ get_header();
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
                 <div class="team-item">
                     <div class="team-img">
-                        <img src="img/team-3.jpg" class="img-fluid" alt="" />
+                        <img src=" <?php echo get_template_directory_uri(); ?> /img/team-3.jpg" class="img-fluid"
+                            alt="" />
                     </div>
                     <div class="team-title">
                         <h4 class="mb-0">David James</h4>
@@ -840,7 +845,8 @@ get_header();
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
                 <div class="team-item">
                     <div class="team-img">
-                        <img src="img/team-4.jpg" class="img-fluid" alt="" />
+                        <img src=" <?php echo get_template_directory_uri(); ?> /img/team-4.jpg" class="img-fluid"
+                            alt="" />
                     </div>
                     <div class="team-title">
                         <h4 class="mb-0">David James</h4>
@@ -882,7 +888,8 @@ get_header();
                     <i class="fas fa-quote-left fa-2x"></i>
                 </div>
                 <div class="testimonial-img">
-                    <img src="img/testimonial-1.jpg" class="img-fluid" alt="Image" />
+                    <img src=" <?php echo get_template_directory_uri(); ?> /img/testimonial-1.jpg" class="img-fluid"
+                        alt="Image" />
                 </div>
                 <div class="testimonial-text">
                     <p class="mb-0">
@@ -913,7 +920,8 @@ get_header();
                     <i class="fas fa-quote-left fa-2x"></i>
                 </div>
                 <div class="testimonial-img">
-                    <img src="img/testimonial-2.jpg" class="img-fluid" alt="Image" />
+                    <img src=" <?php echo get_template_directory_uri(); ?> /img/testimonial-2.jpg" class="img-fluid"
+                        alt="Image" />
                 </div>
                 <div class="testimonial-text">
                     <p class="mb-0">
@@ -944,7 +952,8 @@ get_header();
                     <i class="fas fa-quote-left fa-2x"></i>
                 </div>
                 <div class="testimonial-img">
-                    <img src="img/testimonial-3.jpg" class="img-fluid" alt="Image" />
+                    <img src=" <?php echo get_template_directory_uri(); ?> /img/testimonial-3.jpg" class="img-fluid"
+                        alt="Image" />
                 </div>
                 <div class="testimonial-text">
                     <p class="mb-0">
@@ -975,7 +984,8 @@ get_header();
                     <i class="fas fa-quote-left fa-2x"></i>
                 </div>
                 <div class="testimonial-img">
-                    <img src="img/testimonial-2.jpg" class="img-fluid" alt="Image" />
+                    <img src=" <?php echo get_template_directory_uri(); ?> /img/testimonial-2.jpg" class="img-fluid"
+                        alt="Image" />
                 </div>
                 <div class="testimonial-text">
                     <p class="mb-0">
