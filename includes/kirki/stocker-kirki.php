@@ -20,7 +20,7 @@ stocker_kirki_panels();
 
 
 // section
-function stocker_kirki_section_and_controls()
+function stocker_kirki_topbar_info()
 {
     if (class_exists('Kirki\Section')) {
         new \Kirki\Section(
@@ -65,4 +65,46 @@ function stocker_kirki_section_and_controls()
     }
 }
 
-stocker_kirki_section_and_controls();
+stocker_kirki_topbar_info();
+
+
+function stocker_kirki_header_logo()
+{
+    if (class_exists('Kirki\Section')) {
+        new \Kirki\Section(
+            'stocker_header_logo',
+            [
+                'title' => esc_html__('Stocker Header Logo', 'kirki'),
+                'description' => esc_html__('Stocker Header Logo Description', 'kirki'),
+                'panel' => 'stocker_options_panel',
+                'priority' => 160,
+            ]
+        );
+
+        new \Kirki\Field\Text(
+            [
+                'settings' => 'stocker_header_text',
+                'label' => esc_html__('Header Text', 'kirki'),
+                'section' => 'stocker_header_logo',
+                'default' => esc_html__('Stocker', 'kirki'),
+                'priority' => 10,
+            ]
+        );
+
+        new \Kirki\Field\Image(
+            [
+                'settings' => 'stocker_logo',
+                'label' => esc_html__('Image Control (URL)', 'kirki'),
+                'description' => esc_html__('The saved value will be the URL.', 'kirki'),
+                'section' => 'stocker_header_logo',
+                'default' => '',
+                'priority' => 10,
+            ]
+        );
+    }
+
+
+
+
+}
+stocker_kirki_header_logo();
