@@ -1,17 +1,15 @@
-/**
- * Theme Name: Stocker-theme
- * Author: Tareq Monower
- * Author URI: https://profiles.wordpress.org/tamimh/
- * Description: This is a custom wordpress theme built for stock market.
- * Version: 1.0
- * Tags: custom-background, custom-logo, custom-menu
- *
- * @format
- */
-
-.owl-nav {
-  display: none !important;
-}
+/*
+Theme Name: Stocker
+Author: Tareq Monower
+Author URI: https://profiles.wordpress.org/tamimh/
+Description: This is a custom wordpress theme built for stock market. This is a custom wordpress theme built for stock market. i have built this theme while doing wordpress theme development course on ostad as practice.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.0
+Requires at least: 6.0
+Tested up to: 6.2
+Requires PHP: 7.4
+Text Domain: stocker.
+*/
 
 html {
   scroll-behavior: smooth;
