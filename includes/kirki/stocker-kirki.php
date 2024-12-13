@@ -36,9 +36,29 @@ function stocker_kirki_section_and_controls()
         new \Kirki\Field\Text(
             [
                 'settings' => 'stocker_location',
-                'label' => esc_html__('Stocker Location', 'kirki'),
+                'label' => esc_html__('Location', 'kirki'),
                 'section' => 'stocker_topbar_info',
-                'default' => esc_html__('Stocker Location Default', 'kirki'),
+                'default' => esc_html__(' Enter your location here', 'kirki'),
+                'priority' => 10,
+            ]
+        );
+
+        new \Kirki\Field\Text(
+            [
+                'settings' => 'stocker_phone',
+                'label' => esc_html__('Phone Number', 'kirki'),
+                'section' => 'stocker_topbar_info',
+                'default' => esc_html__('+01234567890', 'kirki'),
+                'priority' => 10,
+            ]
+        );
+
+        new \Kirki\Field\Text(
+            [
+                'settings' => 'stocker_email',
+                'label' => esc_html__('Email', 'kirki'),
+                'section' => 'stocker_topbar_info',
+                'default' => esc_html__('example@example.com', 'kirki'),
                 'priority' => 10,
             ]
         );
