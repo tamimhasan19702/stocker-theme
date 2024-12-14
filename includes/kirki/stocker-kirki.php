@@ -86,7 +86,7 @@ function stocker_kirki_header_logo()
                 'settings' => 'stocker_header_text',
                 'label' => esc_html__('Header Text', 'kirki'),
                 'section' => 'stocker_header_logo',
-                'default' => esc_html__('Stocker', 'kirki'),
+                'default' => function_exists('get_theme_mod') ? get_theme_mod('stocker_header_text', 'Stocker') : 'Stocker',
                 'priority' => 10,
             ]
         );
@@ -97,7 +97,7 @@ function stocker_kirki_header_logo()
                 'label' => esc_html__('Image Control (URL)', 'kirki'),
                 'description' => esc_html__('The saved value will be the URL.', 'kirki'),
                 'section' => 'stocker_header_logo',
-                'default' => '',
+                'default' => function_exists('get_theme_mod') ? get_theme_mod('stocker_logo', '') : '',
                 'priority' => 10,
             ]
         );

@@ -9,6 +9,8 @@ function stocker_theme_setup()
 
     add_theme_support('post-thumbnails');
 
+    add_theme_support('menus');
+
     add_theme_support('html5', array(
         'search-form',
         'comment-form',
@@ -39,4 +41,10 @@ function stocker_theme_setup()
         '/css/style.css',
         '/style.css'
     ]);
+
+    register_nav_menus(array(
+        'main_menu' => 'Main Menu',
+    ));
+
+    remove_theme_support('block-editor-style');
 }
