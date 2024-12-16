@@ -18,7 +18,9 @@ if(!function_exists('stocker_main_menu')) {
             'theme_location' => 'stocker_menu',
             'container' => '',
             'container_class' => '',
-            'menu_class' => 'navbar-nav ms-auto py-0'
+            'menu_class' => 'navbar-nav ms-auto py-0',
+            'fallback_cb' => 'Stocker_Custom_Walker_Nav_Menu::fallback',
+            'walker' => new Stocker_Custom_Walker_Nav_Menu
         ));
     }
 }
