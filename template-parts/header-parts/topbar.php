@@ -43,29 +43,68 @@ $stocker_email = get_theme_mod('stocker_email', 'Example@gmail.com');
             </div>
         </div>
 
-        <!-- account -->
+        <!-- search -->
         <div class="col-lg-4 text-center text-lg-end">
-            <div class="d-inline-flex align-items-center" style="height: 45px;">
-                <a href="#"><small class="me-3 text-dark"><i
-                            class="fa fa-user text-primary me-2"></i>Register</small></a>
+            <div class="d-inline-flex align-items-center position-relative" style="height: 45px;">
+                <a href="#" class="search-icon" data-bs-toggle="modal" data-bs-target="#searchModal"><i
+                        class="fa fa-search text-primary me-2"></i></a>
 
-                <a href="#"><small class="me-3 text-dark"><i
-                            class="fa fa-sign-in text-primary me-2"></i>Login</small></a>
 
-                <div class="dropdown">
-                    <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i
-                                class="fa fa-home text-primary me-2"></i> My Dashboard</small>
-                    </a>
 
-                    <div class="dropdown-menu rounded">
-                        <a href="#" class="dropdown-item"><i class="fa fa-user me-2"></i> My Profile</a>
-                        <a href="#" class="dropdown-item"><i class="fa fa-comment me-2"></i> Inbox</a>
-                        <a href="#" class="dropdown-item"><i class="fa fa-bell me-2"></i> Notifications</a>
-                        <a href="#" class="dropdown-item"><i class="fa fa-cog me-2"></i> Account Settings</a>
-                        <a href="#" class="dropdown-item"><i class="fa fa-power-off me-2"></i> Log Out</a>
+                <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Search</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="searchForm">
+                                    <input class="form-control form-control-sm" type="search" placeholder="Search"
+                                        aria-label="Search" name="query">
+                                    <button class="btn btn-primary btn-sm mt-2" type="submit"><i
+                                            class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <div class="overlay" id="overlay"></div>
+
             </div>
         </div>
+
+        <script>
+        const searchIcon = document.querySelector('.search-icon');
+        const searchForm = document.querySelector('#searchForm');
+        const overlay = document.querySelector('#overlay');
+
+        searchIcon.addEventListener('click', (e) => {
+            e.preventDefault();
+            searchForm.classList.toggle('d-none');
+            overlay.classList.toggle('d-none');
+        })
+
+        overlay.addEventListener('click', () => {
+            searchForm.classList.add('d-none');
+            overlay.classList.add('d-none');
+        })
+        </script>
+
+        <style>
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+        </style>
     </div>
 </div>
