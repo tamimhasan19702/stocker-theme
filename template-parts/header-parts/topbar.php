@@ -17,26 +17,26 @@ $stocker_email = get_theme_mod('stocker_email', 'Example@gmail.com');
                 <!-- dynamic stocker info -->
 
                 <?php if (isset($stocker_location) && !empty($stocker_location)): ?>
-                <a href="https://www.google.com/maps/search/<?php echo urlencode($stocker_location); ?>"
-                    class="text-muted small me-4" target="_blank" rel="noopener noreferrer"><i
-                        class="fa fa-map-marker text-primary me-2" style="vertical-align:middle"></i>
-                    <?php echo esc_html($stocker_location); ?>
-                </a>
+                    <a href="https://www.google.com/maps/search/<?php echo urlencode($stocker_location); ?>"
+                        class="text-muted small me-4" target="_blank" rel="noopener noreferrer"><i
+                            class="fa fa-map-marker text-primary me-2" style="vertical-align:middle"></i>
+                        <?php echo esc_html($stocker_location); ?>
+                    </a>
                 <?php endif; ?>
 
 
                 <?php if (isset($stocker_phone) && !empty($stocker_phone)): ?>
 
-                <a href="tel: <?php echo esc_html($stocker_phone); ?>" class="text-muted small me-4"><i
-                        class="fa fa-phone text-primary me-2"
-                        style="vertical-align:middle"></i><?php echo esc_html($stocker_phone); ?></a>
+                    <a href="tel: <?php echo esc_html($stocker_phone); ?>" class="text-muted small me-4"><i
+                            class="fa fa-phone text-primary me-2"
+                            style="vertical-align:middle"></i><?php echo esc_html($stocker_phone); ?></a>
                 <?php endif; ?>
 
 
                 <?php if (isset($stocker_email) && !empty($stocker_email)): ?>
-                <a href="mailto:<?php echo esc_html($stocker_email); ?>" class="text-muted small me-0">
-                    <i class="fa fa-envelope text-primary me-2"
-                        style="vertical-align:middle"></i><?php echo esc_html($stocker_email); ?></a>
+                    <a href="mailto:<?php echo esc_html($stocker_email); ?>" class="text-muted small me-0">
+                        <i class="fa fa-envelope text-primary me-2"
+                            style="vertical-align:middle"></i><?php echo esc_html($stocker_email); ?></a>
                 <?php endif; ?>
 
 
@@ -56,14 +56,18 @@ $stocker_email = get_theme_mod('stocker_email', 'Example@gmail.com');
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Search</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                    <?php echo esc_html__('Search', 'stocker-theme'); ?>
+                                </h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form id="searchForm">
-                                    <input class="form-control form-control-sm" type="search" placeholder="Search"
-                                        aria-label="Search" name="query">
+                                <form id="searchForm" action="<?php echo esc_url(home_url()); ?>" method="get">
+                                    <input class="form-control form-control-sm" type="search"
+                                        placeholder="<?php echo esc_attr__('Search here', 'stocker-theme'); ?>"
+                                        aria-label="Search" name="s"
+                                        value="<?php echo esc_attr(get_search_query()); ?>">
                                     <button class="btn btn-primary btn-sm mt-2" type="submit"><i
                                             class="fa fa-search"></i></button>
                                 </form>
@@ -77,34 +81,5 @@ $stocker_email = get_theme_mod('stocker_email', 'Example@gmail.com');
             </div>
         </div>
 
-        <script>
-        const searchIcon = document.querySelector('.search-icon');
-        const searchForm = document.querySelector('#searchForm');
-        const overlay = document.querySelector('#overlay');
-
-        searchIcon.addEventListener('click', (e) => {
-            e.preventDefault();
-            searchForm.classList.toggle('d-none');
-            overlay.classList.toggle('d-none');
-        })
-
-        overlay.addEventListener('click', () => {
-            searchForm.classList.add('d-none');
-            overlay.classList.add('d-none');
-        })
-        </script>
-
-        <style>
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-            display: none;
-        }
-        </style>
     </div>
 </div>
