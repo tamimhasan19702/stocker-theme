@@ -3,6 +3,7 @@
         <div class="container py-5 border-start-0 border-end-0"
             style="border: 1px solid; border-color: rgb(255, 255, 255, 0.08)">
             <div class="row g-5">
+
                 <div class="col-md-6 col-lg-6 col-xl-4">
                     <div class="footer-item">
                         <a href="index.html" class="p-0">
@@ -33,6 +34,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-lg-6 col-xl-2">
                     <div class="footer-item">
                         <h4 class="text-white mb-4">Quick Links</h4>
@@ -44,6 +46,7 @@
                         <a href="#"><i class="fas fa-angle-right me-2"></i> Contact us</a>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item">
                         <h4 class="text-white mb-4">Support</h4>
@@ -55,6 +58,7 @@
                         <a href="#"><i class="fas fa-angle-right me-2"></i> Help</a>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item">
                         <h4 class="text-white mb-4">Contact Info</h4>
@@ -86,35 +90,15 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
     <!-- Footer End -->
 
     <!-- Copyright Start -->
-    <div class="container-fluid copyright py-4">
-        <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="col-md-6 text-center text-md-start mb-md-0">
-                    <span class="text-body"><a href="#" class="border-bottom text-white"><i
-                                class="fas fa-copyright text-light me-2"></i>Your Site
-                            Name</a>, All right reserved.</span>
-                </div>
-                <div class="col-md-6 text-center text-md-end text-body">
-
-                    Designed By
-                    <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a> <span
-                        style="margin-left: 10px;"></span>
-                    Developed By <a class="border-bottom text-white" href="https://profiles.wordpress.org/tamimh/">Tareq
-                        Monower</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php get_template_part('template-parts/footer-parts/copyright');?>
     <!-- Copyright End -->
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <?php wp_footer();?>
