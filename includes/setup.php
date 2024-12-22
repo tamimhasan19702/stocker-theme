@@ -47,4 +47,6 @@ function stocker_theme_setup()
     ));
 
     remove_theme_support('block-editor-style');
+
+    remove_theme_support('widgets-block-editor');
 }
