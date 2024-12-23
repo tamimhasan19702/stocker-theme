@@ -9,7 +9,8 @@
 
 <div class="collapse navbar-collapse" id="navbarCollapse">
     <?php stocker_main_menu(); ?>
-    <a href="#" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Get Started</a>
+    <a href="#"
+        class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0"><?php esc_html_e( 'Get Started', 'stocker' ); ?></a>
 </div>
 
 

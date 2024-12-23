@@ -33,13 +33,45 @@ if(!function_exists('stocker_main_menu')) {
 if(!function_exists('stocker_theme_slug_widgets_init')) {
     function stocker_theme_slug_widgets_init() {
         register_sidebar( array(
-            'name'          => __( 'Main Sidebar', 'textdomain' ),
-            'id'            => 'sidebar-1',
-            'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'textdomain' ),
-            'before_widget' => '<li id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</li>',
-            'before_title'  => '<h2 class="widgettitle">',
-            'after_title'   => '</h2>',
+            'name'          => __( 'Footer', 'stocker' ),
+            'id'            => 'footer-1',
+            'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'stocker' ),
+            'before_widget' => '<div id="%1$s" class="col-md-6 col-lg-6 col-xl-4 %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="text-white mb-4">',
+            'after_title'   => '</h4>',
+        ) );
+        
+        register_sidebar( array(
+            'name'          => __( 'Footer', 'stocker' ),
+            'id'            => 'footer-2',
+            'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'stocker' ),
+            'before_widget' => '<div id="%1$s" class="col-md-6 col-lg-6 col-xl-2 %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="text-white mb-4">',
+            'after_title'   => '</h4>',
+        ) );
+
+        register_sidebar( array(
+            'name'          => __( 'Footer', 'stocker' ),
+            'id'            => 'footer-3',
+            'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'stocker' ),
+            'before_widget' => '<div id="%1$s" class="
+            col-md-6 col-lg-6 col-xl-3 %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="text-white mb-4">',
+            'after_title'   => '</h4>',
+        ) );
+        
+        register_sidebar( array(
+            'name'          => __( 'Footer', 'stocker' ),
+            'id'            => 'footer-4',
+            'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'stocker' ),
+            'before_widget' => '<div id="%1$s" class="
+            col-md-6 col-lg-6 col-xl-3 %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="text-white mb-4">',
+            'after_title'   => '</h4>',
         ) );
     }
 }

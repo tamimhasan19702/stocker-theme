@@ -108,9 +108,3 @@ function stocker_kirki_header_logo()
 
 }
 stocker_kirki_header_logo();
-
-
-function stocker_kirki_footer_info()
-{
-
-}
