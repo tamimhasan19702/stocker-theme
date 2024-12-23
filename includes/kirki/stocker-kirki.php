@@ -108,3 +108,43 @@ function stocker_kirki_header_logo()
 
 }
 stocker_kirki_header_logo();
+
+
+function stocker_footer_copyright(){
+    if (class_exists('Kirki\Section')) {
+        new \Kirki\Section(
+            'stocker_footer_copyright',
+            [
+                'title' => esc_html__('Stocker Footer Copyright', 'kirki'),
+                'description' => esc_html__('Stocker Footer Copyright Description', 'kirki'),
+                'panel' => 'stocker_options_panel',
+                'priority' => 160,
+            ]
+        );
+
+        new \Kirki\Field\Text(
+            [
+                'settings' => 'stocker_copyright',
+                'label' => esc_html__('Site Name', 'kirki'),
+                'section' => 'stocker_footer_copyright',
+                'default' => function_exists('get_theme_mod') ? get_theme_mod('stocker_copyright', get_bloginfo('name')) : get_bloginfo('name'), // Default value
+                'priority' => 10,
+            ]
+        );
+
+
+        new \Kirki\Field\Text(
+            [
+                'settings' => 'stocker_copyright_link',
+                'label' => esc_html__('Copyright Link', 'kirki'),
+                'section' => 'stocker_footer_copyright',
+                'default' => function_exists('get_theme_mod') ? get_theme_mod('stocker_copyright_link', '#') : '#', // Default value
+                'priority' => 10,
+            ]
+        );
+    }
+
+
+}
+
+stocker_footer_copyright();
