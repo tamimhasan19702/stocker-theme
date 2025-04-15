@@ -12,7 +12,7 @@ include_once(get_theme_file_path('/includes/front/stocker-custom-walker-nav-menu
 
 
 
-add_action('after_setup_theme', 'stocker_theme_setup');
+add_action('init', 'stocker_theme_setup');
 add_action('wp_enqueue_scripts', 'stocker_theme_enqueue');
 add_action('wp_head', 'stocker_theme_head', 5);
 
@@ -22,5 +22,12 @@ add_action('widgets_init', 'stocker_theme_slug_widgets_init');
 
 
 // custom functions
-
-include_once(get_theme_file_path('/includes/kirki/stocker-kirki.php'));
+if (function_exists('kirki')) {
+    include_once(get_theme_file_path('/includes/kirki/stocker-kirki.php'));
+} else {
+    add_action('admin_notices', function() {
+        echo '<div class="notice notice-warning is-dismissible">
+                <p>Please install and activate the Kirki plugin for the theme to function properly.</p>
+              </div>';
+    });
+}

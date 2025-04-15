@@ -74,7 +74,7 @@ function stocker_kirki_header_logo()
         new \Kirki\Section(
             'stocker_header_logo',
             [
-                'title' => esc_html__('Stocker Header Logo', 'kirki'),
+                'title' => esc_html__('Stocker Header Options', 'kirki'),
                 'description' => esc_html__('Stocker Header Logo Description', 'kirki'),
                 'panel' => 'stocker_options_panel',
                 'priority' => 160,
@@ -101,6 +101,114 @@ function stocker_kirki_header_logo()
                 'priority' => 10,
             ]
         );
+
+         
+        new \Kirki\Field\Text(
+            [
+                'settings' => 'stocker_button_text',
+                'label' => esc_html__('Button Text', 'kirki'),
+                'section' => 'stocker_header_logo',
+                'default' => esc_html__('Click Me', 'kirki'),
+                'priority' => 10,
+            ]
+        );
+
+        new \Kirki\Field\URL(
+            [
+                'settings' => 'stocker_button_url',
+                'label' => esc_html__('Button URL', 'kirki'),
+                'section' => 'stocker_header_logo',
+                'default' => esc_url(home_url('/')),
+                'priority' => 10,
+            ]
+        );
+
+        new \Kirki\Field\Color(
+            [
+                'settings' => 'stocker_button_bgcolor',
+                'label' => esc_html__('Button Background Color', 'kirki'),
+                'section' => 'stocker_header_logo',
+                'default' => '#007bff',
+                'priority' => 10,
+            ]
+        );
+
+        new \Kirki\Field\Color(
+            [
+                'settings' => 'stocker_button_text_color',
+                'label' => esc_html__('Button Text Color', 'kirki'),
+                'section' => 'stocker_header_logo',
+                'default' => '#ffffff',
+                'priority' => 10,
+            ]
+        );
+
+        new \Kirki\Field\Color(
+            [
+                'settings' => 'stocker_button_hover_bgcolor',
+                'label' => esc_html__('Button Hover Background Color', 'kirki'),
+                'section' => 'stocker_header_logo',
+                'default' => '#0056b3',
+                'priority' => 10,
+            ]
+        );
+
+        new \Kirki\Field\Color(
+            [
+                'settings' => 'stocker_button_hover_text_color',
+                'label' => esc_html__('Button Hover Text Color', 'kirki'),
+                'section' => 'stocker_header_logo',
+                'default' => '#ffffff',
+                'priority' => 10,
+            ]
+        );
+
+        new \Kirki\Field\Slider(
+            [
+                'settings' => 'stocker_button_radius',
+                'label' => esc_html__('Button Radius', 'kirki'),
+                'section' => 'stocker_header_logo',
+                'default' => 5,
+                'choices' => [
+                    'min' => 0,
+                    'max' => 50,
+                    'step' => 1,
+                ],
+                'priority' => 10,
+            ]
+        );
+
+        new \Kirki\Field\Dimensions(
+            [
+                'settings' => 'stocker_button_margin',
+                'label' => esc_html__('Button Margin', 'kirki'),
+                'section' => 'stocker_header_logo',
+                'default' => [
+                    'top' => '10px',
+                    'bottom' => '10px',
+                    'left' => '10px',
+                    'right' => '10px',
+                ],
+                'priority' => 10,
+            ]
+        );
+
+        new \Kirki\Field\Dimensions(
+            [
+                'settings' => 'stocker_button_padding',
+                'label' => esc_html__('Button Padding', 'kirki'),
+                'section' => 'stocker_header_logo',
+                'default' => [
+                    'top' => '10px',
+                    'bottom' => '10px',
+                    'left' => '20px',
+                    'right' => '20px',
+                ],
+                'priority' => 10,
+            ]
+        );
+
+
     }
 
 
@@ -125,9 +233,9 @@ function stocker_footer_copyright(){
         new \Kirki\Field\Text(
             [
                 'settings' => 'stocker_copyright',
-                'label' => esc_html__('Site Name', 'kirki'),
+                'label' => esc_html__('Copyright Text', 'kirki'),
                 'section' => 'stocker_footer_copyright',
-                'default' => function_exists('get_theme_mod') ? get_theme_mod('stocker_copyright', get_bloginfo('name')) : get_bloginfo('name'), // Default value
+                'default' => function_exists('get_theme_mod') ? get_theme_mod('stocker_copyright', '&copy; ' . date('Y') . ' ' . get_bloginfo('name')) : '&copy; ' . date('Y') . ' ' . get_bloginfo('name'), // Default value
                 'priority' => 10,
             ]
         );
@@ -142,6 +250,9 @@ function stocker_footer_copyright(){
                 'priority' => 10,
             ]
         );
+
+
+        
     }
 
 
