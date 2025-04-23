@@ -62,6 +62,37 @@ function stocker_kirki_topbar_info()
                 'priority' => 10,
             ]
         );
+
+        new \Kirki\Field\Repeater(
+            [
+                'settings' => 'stocker_topbar_buttons',
+                'label' => esc_html__('Button', 'kirki'),
+                'section' => 'stocker_topbar_info',
+                'priority' => 10,
+                'row_label' => [
+                    'type' => 'field',
+                    'value' => esc_html__('Button', 'kirki'),
+                    'field' => 'text',
+                ],
+                'button_label' => esc_html__('Add new button', 'kirki'),
+                'fields' => [
+                    'icon' => [
+                        'type' => 'text',
+                        'label' => esc_html__('Icon Class', 'kirki'),
+                        'description' => esc_html__('Enter the fontawesome class like "fas fa-user"', 'kirki'),
+                        'default' => 'fas fa-user',
+                    ],
+                    'text' => [
+                        'type' => 'text',
+                        'label' => esc_html__('Button Text', 'kirki'),
+                    ],
+                    'url' => [
+                        'type' => 'url',
+                        'label' => esc_html__('Button URL', 'kirki'),
+                    ],
+                ],
+            ]
+        );
     }
 }
 

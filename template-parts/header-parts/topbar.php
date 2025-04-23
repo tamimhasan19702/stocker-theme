@@ -3,6 +3,7 @@
 $stocker_location = get_theme_mod('stocker_location', ' Enter your location here');
 $stocker_phone = get_theme_mod('stocker_phone', '+01234567890');
 $stocker_email = get_theme_mod('stocker_email', 'Example@gmail.com');
+$stocker_top_buttons = get_theme_mod('stocker_topbar_buttons');
 
 ?>
 
@@ -46,22 +47,20 @@ $stocker_email = get_theme_mod('stocker_email', 'Example@gmail.com');
         <!-- search -->
         <div class="col-lg-4 text-center text-lg-end">
             <div class="d-inline-flex align-items-center" style="height: 45px">
-                <a href="#"><small class="me-3 text-dark"><i
-                            class="fa fa-user text-primary me-2"></i>Register</small></a>
-                <a href="#"><small class="me-3 text-dark"><i
-                            class="fa fa-sign-in-alt text-primary me-2"></i>Login</small></a>
-                <div class="dropdown">
-                    <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i
-                                class="fa fa-home text-primary me-2"></i> My
-                            Dashboard</small></a>
-                    <div class="dropdown-menu rounded">
-                        <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> My Profile</a>
-                        <a href="#" class="dropdown-item"><i class="fas fa-comment-alt me-2"></i> Inbox</a>
-                        <a href="#" class="dropdown-item"><i class="fas fa-bell me-2"></i> Notifications</a>
-                        <a href="#" class="dropdown-item"><i class="fas fa-cog me-2"></i> Account Settings</a>
-                        <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Log Out</a>
-                    </div>
-                </div>
+                <?php 
+                
+                if(isset($stocker_top_buttons) && !empty($stocker_top_buttons)){  
+                foreach($stocker_top_buttons as $stocker_top_button){
+    ?>
+
+                <a href="<?php echo esc_url($stocker_top_button['url']); ?>"><small class="me-3 text-dark"><i
+                            class="<?php echo esc_attr($stocker_top_button['icon']); ?> text-primary me-2"></i><?php echo esc_html($stocker_top_button['text']); ?></small></a>
+                <?php 
+                }
+
+                  }
+                
+                ?>
             </div>
         </div>
 
